@@ -54,8 +54,8 @@
       socket.on("partner-left", () => {
         console.log("partner left");
         socket.emit("find-match", { type: "bot" });
-        reset();
         connecting = true;
+        reset();
       });
 
       socket.on("disconnect", () => {
@@ -67,6 +67,7 @@
   function reset() {
     roomId = "";
     reply = "";
+    messages = [];
   }
 </script>
 
