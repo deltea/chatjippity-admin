@@ -61,6 +61,11 @@
       socket.on("disconnect", () => {
         console.log("disconnected from server");
       });
+
+      socket.on("connect_error", (err) => {
+        // the reason of the error, for example "xhr poll error"
+        console.log(err.message);
+      });
     });
   });
 
