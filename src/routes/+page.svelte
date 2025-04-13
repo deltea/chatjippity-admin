@@ -32,6 +32,7 @@
       console.log("connected to server with id: ", socket.id);
 
       setTimeout(() => {
+        console.log("finding match...");
         socket.emit("find-match", { type: "bot" });
       }, 1000);
 
