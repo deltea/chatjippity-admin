@@ -5,6 +5,10 @@
   --color-fg: #23B516;
 }
 
+body {
+  @apply bg-bg text-fg;
+}
+
 .glow {
   text-shadow: #23B516 0px 0px 12px;
 }

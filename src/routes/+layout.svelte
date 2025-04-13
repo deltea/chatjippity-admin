@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>ChatJippity</title>
+  <title>ChatJippity Admin</title>
 </svelte:head>
 
 {@render children()}
