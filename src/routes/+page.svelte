@@ -116,7 +116,7 @@ _____ _           _     ___ _             _ _
               bind:value={reply}
               class="outline-none w-[20rem]"
               placeholder="reply here..."
-              minlength={isReasoning ? 200 : 999999}
+              minlength={isReasoning ? 200 : 0}
             />
 
             <input type="submit" hidden />
