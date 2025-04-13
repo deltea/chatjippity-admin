@@ -31,7 +31,9 @@
     socket.on("connect", () => {
       console.log("connected to server with id: ", socket.id);
 
-      socket.emit("find-match", { type: "bot" });
+      setTimeout(() => {
+        socket.emit("find-match", { type: "bot" });
+      }, 1000);
 
       socket.on("match-found", ({ roomId: room, partnerId }) => {
         console.log("room id: ", room);
