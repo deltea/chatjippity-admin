@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { io, Socket } from "socket.io-client";
+  import { PUBLIC_DEV } from "$env/static/public";
 
   interface Message {
     bot: boolean;
@@ -16,7 +17,7 @@
   let messages: Message[] = $state([]);
 
   onMount(() => {
-    socket = io("http://localhost:3000");
+    socket = io(PUBLIC_DEV ? "http://localhost:3000" : "https://chat-jippity-server.onrender.com");
 
     document.addEventListener("keypress", (event: KeyboardEvent) => {
       if (event.key === "Enter" && reply.length > 0) {
