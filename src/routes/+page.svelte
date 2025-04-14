@@ -98,7 +98,7 @@ _____ _           _     ___ _             _ _
       <h1>SUCCESSFULLY CONNECTED TO HUMAN {partner}</h1>
 
       {#if messages.length > 0}
-        <div class="space-y-2 w-[40rem]">
+        <div class="space-y-2 w-[40rem] h-[30rem] overflow-y-auto">
           {#each messages as message}
             <div class="flex gap-3">
               <span class="font-bold">{message.bot ? "ME" : "HUMAN"}:</span>
