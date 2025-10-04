@@ -116,7 +116,7 @@ _____ _           _     ___ _             _ _
               bind:value={reply}
               class="outline-none w-[20rem]"
               placeholder="reply here..."
-              minlength={isReasoning ? 200 : 0}
+              minlength={isReasoning ? 50 : 0}
             />
 
             <input type="submit" hidden />
@@ -126,7 +126,7 @@ _____ _           _     ___ _             _ _
             REASONING: {isReasoning ? "ON" : "OFF"}
 
             {#if isReasoning}
-              <span class="text-sm">minimum 200 characters</span>
+              <span class="text-sm">minimum 50 characters</span>
             {/if}
           </p>
         {/if}
